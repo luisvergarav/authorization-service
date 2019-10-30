@@ -13,4 +13,5 @@ ARG JAR_FILE=target/Authorization-Service-0.0.1-SNAPSHOT.jar
 ADD ${JAR_FILE} authorization-service.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-jar","/authorization-service.jar"]
+#ENTRYPOINT ["java","-jar","/authorization-service.jar"]
+CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=test", "/authorization-service.jar"]
