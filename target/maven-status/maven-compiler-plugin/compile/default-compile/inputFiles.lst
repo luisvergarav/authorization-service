@@ -1,0 +1,17 @@
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/repository/InMemUsuarioRepository.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/entities/UsuarioRolePK.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/repository/UsuarioRepository.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/service/UsuarioServiceImpl.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/config/MySQLAppConfig.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/config/AuthorizationServerConfig.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/entities/Entity.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/repository/Repository.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/repository/ReadOnlyRepository.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/service/UsuarioService.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/config/SecurityConfig.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/entities/UsuarioRole.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/service/ReadOnlyBaseService.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/entities/Usuario.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/AuthorizationServiceApplication.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/service/BaseService.java
+/home/lvergara/Descargas/Authorization-Service/src/main/java/com/easygroup/neargrocery/AuthorizationService/domain/entities/BaseEntity.java
