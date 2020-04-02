@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: authorization-service
+  namespace: neargrocery-development
+  labels:
+    app: authorization-service
+    version: "1.0"
+    environment: development
+spec:
+  selector:
+    app: authorization-service
+    version: "1.0"
+    environment: development
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 9993
+    targetPort: 9993
