@@ -41,9 +41,15 @@ node {
         //sh("kubectl get namespace ${env.BRANCH_NAME} || kubectl create ns ${env.BRANCH_NAME}")
         // Don't use public load balancing for development branches
         //sh("sed -i.bak 's#LoadBalancer#ClusterIP#' ./k8s/services/frontend.yaml")
+               
         sh("sed -i.bak 's#192.168.99.100:5000/authorization-service:v1.4#${imageTag}#' ./yamls/dev/*.yaml")
         //sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/services/")
-        sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/dev/")
+      kubernetesDeploy(
+                    kubeconfigId: 'kubeconfig',
+                    configs: 'yamls/dev/*.yaml',
+                    enableConfigSubstitution: true
+                )
+        //sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/dev/")
         echo 'To access your environment run `kubectl proxy`'
         echo "Then access your service via http://localhost:8001/api/v1/proxy/namespaces/${env.BRANCH_NAME}/services/${feSvcName}:80/"
   }
