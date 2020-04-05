@@ -49,7 +49,7 @@ node {
     }
     
       kubernetesDeploy(
-                    kubeconfigId: 'kubeconfig',
+                    kubeconfigId: 'jenkins-deployer',
                     configs: 'yamls/dev/*.yaml',
                     enableConfigSubstitution: true
                 )
