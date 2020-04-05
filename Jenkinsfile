@@ -44,7 +44,7 @@ node {
                
         sh("sed -i.bak 's#192.168.99.100:5000/authorization-service:v1.4#${imageTag}#' ./yamls/dev/*.yaml")
         //sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/services/")
-    withKubeConfig([credentialsId: 'kubeconfig', serverUrl: 'https://192.168.99.100:6443']) {
+    withKubeConfig([credentialsId: 'jenkins-deployer', serverUrl: 'https://192.168.99.100:6443']) {
      sh("kubectl version")
     }
     
