@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: authorization-service-v1.0
-  namespace: neargrocery-development
+  namespace: dev
   labels:
     app: authorization-service
     version: "1.0"
