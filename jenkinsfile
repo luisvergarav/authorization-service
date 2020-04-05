@@ -43,7 +43,7 @@ node {
         //sh("sed -i.bak 's#LoadBalancer#ClusterIP#' ./k8s/services/frontend.yaml")
         sh("sed -i.bak 's#192.168.99.100:5000/authorization-service:v1.4#${imageTag}#' ./yamls/dev/*.yaml")
         //sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/services/")
-        sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/dev/")
+        //sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/dev/")
         kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
                     configs: 'yamls/dev/*.yaml',
