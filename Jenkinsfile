@@ -53,7 +53,12 @@ node {
          //           configs: 'yamls/dev/*.yaml',
            //         enableConfigSubstitution: true
              //   )
-        sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/dev/")
+        //sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/dev/")
+     kubernetesDeploy(
+                    kubeconfigId: 'kubeconfig',
+                    configs: 'yamls/dev/*.yaml',
+                    enableConfigSubstitution: true
+                )
         echo 'To access your environment run `kubectl proxy`'
         echo "Then access your service via http://localhost:8001/api/v1/proxy/namespaces/${env.BRANCH_NAME}/services/${feSvcName}:80/"
   }
