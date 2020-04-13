@@ -56,11 +56,13 @@ node {
              //   )
     sh ("pwd")
       sh("/usr/local/bin/helm install authentication-chart ./helm/authentication-chart --kubeconfig /var/lib/jenkins/workspace/config")
-     kubernetesDeploy(
-                    kubeconfigId: 'kubeconfig',
-                    configs: 'yamls/dev/*.yaml',
-                    enableConfigSubstitution: true
-                )
+    sh("/usr/local/bin/helm install authentication-chart ./helm/mysql-chart --kubeconfig /var/lib/jenkins/workspace/config")
+      
+    //kubernetesDeploy(
+      //              kubeconfigId: 'kubeconfig',
+        //            configs: 'yamls/dev/*.yaml',
+          //          enableConfigSubstitution: true
+            //    )
         echo 'To access your environment run `kubectl proxy`'
         echo "Then access your service via http://localhost:8001/api/v1/proxy/namespaces/${env.BRANCH_NAME}/services/${feSvcName}:80/"
   }
