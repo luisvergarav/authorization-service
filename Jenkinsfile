@@ -17,6 +17,7 @@ node {
 
   stage "Deploy Application"
   switch (env.BRANCH_NAME) {
+   
     // Roll out to canary environment
     case "canary":
         // Change deployed image in canary to the one we just built
@@ -53,7 +54,8 @@ node {
          //           configs: 'yamls/dev/*.yaml',
            //         enableConfigSubstitution: true
              //   )
-      sh("/usr/local/bin/helm install authentication-chart ./helm/authentication-chart --kubeconfig config")
+    sh ("pwd")
+      sh("/usr/local/bin/helm install authentication-chart ./helm/authentication-chart --kubeconfig /var/lib/jenkins/workspace/config")
      kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
                     configs: 'yamls/dev/*.yaml',
