@@ -53,7 +53,7 @@ node {
          //           configs: 'yamls/dev/*.yaml',
            //         enableConfigSubstitution: true
              //   )
-      sh("helm install authentication-chart ./helm/authentication-chart")
+      sh("/usr/local/bin/helm install authentication-chart ./helm/authentication-chart")
      kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
                     configs: 'yamls/dev/*.yaml',
