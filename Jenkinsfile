@@ -53,7 +53,7 @@ node {
          //           configs: 'yamls/dev/*.yaml',
            //         enableConfigSubstitution: true
              //   )
-      //  sh("kubectl --namespace=${env.BRANCH_NAME} apply -f yamls/dev/")
+      sh("helm install authentication-chart ./helm/authentication-chart")
      kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
                     configs: 'yamls/dev/*.yaml',
