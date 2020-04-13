@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authorization-service-v1.0
+  namespace: neargrocery-development
+  labels:
+    app: authorization-service
+    version: "1.0"
+    environment: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authorization-service
+      version: "1.0"
+      environment: development
+  template:
+    metadata:
+      labels:
+        app: authorization-service
+        version: "1.0"
+        environment: development
+    spec:
+      containers:
+      - name: authorization-v1-0-container
+        image: 192.168.99.100:5000/authorization-service:v1.4
+        env:
+        - name: MYSQL_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-config
+              key: MYSQL_HOST
+        - name: spring.profiles.active
+          value: "development"
+        ports:
+        - containerPort: 9993
