@@ -55,7 +55,8 @@ node {
            //         enableConfigSubstitution: true
              //   )
     sh ("pwd")
-      sh("/usr/local/bin/helm upgrade  --install authentication-chart ./helm/authentication-chart --kubeconfig /var/lib/jenkins/workspace/config")
+      sh("/usr/local/bin/helm upgrade --install authentication-chart ./helm/authentication-chart --kubeconfig /var/lib/jenkins/workspace/config")
+    
     sh("/usr/local/bin/helm upgrade --install mysql-chart ./helm/mysql-chart --kubeconfig /var/lib/jenkins/workspace/config")
       
     //kubernetesDeploy(
