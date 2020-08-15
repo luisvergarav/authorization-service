@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: authorization-v1-0-container
-        image: 192.168.99.100:5000/authorization-service:v1.4
+        image: gcr.io/calm-seeker-284723/authentication-service:v1
         env:
         - name: MYSQL_HOST
           valueFrom:

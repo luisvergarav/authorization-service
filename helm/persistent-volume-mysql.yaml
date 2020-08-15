@@ -3,7 +3,7 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: mysql-persistent-volume
-  namespace: neargrocery-development
+  namespace: insurance-development
   labels:
     type: local
 spec:

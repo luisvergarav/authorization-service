@@ -2,18 +2,17 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mysql-service
-  namespace: neargrocery-development
+  namespace: insurance-development
   labels:
     app: mysql
     version: "1.0"
     environment: testing
 spec:
-  externalIPs:
-    - 192.168.99.100
   selector:
     app: mysql
     version: "1.0"
     environment: testing
+  type: ClusterIP
   ports:
   - port: 3306
   selector:

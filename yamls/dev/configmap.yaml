@@ -2,14 +2,16 @@ apiVersion: v1
 items:
 - apiVersion: v1
   data:
-    MYSQL_HOST: 192.168.99.100
+    MYSQL_HOST: mysql-service
+    MYSQL_USERNAME: root
+    MYSQL_PASSWORD: password
   kind: ConfigMap
   metadata:
     creationTimestamp: 2019-10-30T10:47:47Z
     name: mysql-config
-    namespace: neargrocery-development
+    namespace: insurance-development
     resourceVersion: "42526"
-    selfLink: /api/v1/namespaces/neargrocery-development/configmaps/mysql-config
+    selfLink: /api/v1/namespaces/insurance-development/configmaps/mysql-config
     uid: b62889b0-fb02-11e9-9500-0800275fc834
 kind: List
 metadata:
