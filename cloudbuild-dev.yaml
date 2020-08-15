@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/authorization-service:$BUILD_ID', '.']
-images: ['gcr.io/$PROJECT_ID/authorization-service:$BUILD_ID']
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/authorization-service:dev', '.']
+images: ['gcr.io/$PROJECT_ID/authorization-service:dev']
 
