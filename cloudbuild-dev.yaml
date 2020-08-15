@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/authorization-service:$TAG_NAME', '.']
-- id: 'dev' 
+- id: 'dev'    
 images: ['gcr.io/$PROJECT_ID/authorization-service:$TAG_NAME']
 
