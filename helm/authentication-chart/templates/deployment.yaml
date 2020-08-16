@@ -23,12 +23,12 @@ spec:
     spec:
       containers:
       - name: authorization-v1-0-container
-        image: gcr.io/calm-seeker-284723/authorization-service:dev
+        image: gcr.io/calm-seeker-284723/authorization-service
         env:
         - name: MYSQL_HOST
           valueFrom:
             configMapKeyRef:
-              name: mysql-config
+              name: mysql-config-v000
               key: MYSQL_HOST
         - name: spring.profiles.active
           value: "development"

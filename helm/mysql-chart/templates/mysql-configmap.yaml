@@ -1,0 +1,19 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    MYSQL_HOST: mysql-service
+    MYSQL_PASSWORD: password
+    MYSQL_USERNAME: root
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2020-08-15T22:04:05Z"
+    name: mysql-config
+    namespace: neargrocery-development
+    resourceVersion: "5630595"
+    selfLink: /api/v1/namespaces/neargrocery-development/configmaps/mysql-config
+    uid: e0a436b2-fb78-42ea-aaa3-55a0962a10c4
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
