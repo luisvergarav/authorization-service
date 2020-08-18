@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: authorization-v1-0-container
-        image: ${trigger['tag']}
+        image: "${trigger['tag']}"
         env:
         - name: MYSQL_HOST
           valueFrom:
