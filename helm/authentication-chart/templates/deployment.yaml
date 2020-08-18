@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: authorization-v1-0-container
-        image: gcr.io/calm-seeker-284723/authorization-service
+        image: ${trigger['tag']}
         env:
         - name: MYSQL_HOST
           valueFrom:
