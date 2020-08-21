@@ -16,7 +16,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.easygroup.neargrocery.AuthorizationService.domain.entities.Usuario;
-import com.jayway.jsonpath.Criteria;
 
 
 /**
